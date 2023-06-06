@@ -21,9 +21,9 @@ public class Main {
             int entryValue = entry.getValue();
             if(!isEven(entryValue) && isEven(string.length())) {
                 return false;
-            } else if(!isEven(entryValue) && hasOddNumberOfLetters == false) {
+            } else if(!isEven(entryValue) && !hasOddNumberOfLetters) {
                 hasOddNumberOfLetters = true;
-            } else if(!isEven(entryValue) && hasOddNumberOfLetters == true) {
+            } else if(!isEven(entryValue) && hasOddNumberOfLetters) {
                 return false;
             }
         }
@@ -52,9 +52,9 @@ public class Main {
         for(int i = 0; i < letters.length; i++) {
             if(!isEven(letters[i]) && isEven(string.length())) {
                 return false;
-            } else if(!isEven(letters[i]) && hasOddNumberOfLetters == false) {
+            } else if(!isEven(letters[i]) && !hasOddNumberOfLetters) {
                 hasOddNumberOfLetters = true;
-            } else if(!isEven(letters[i]) && hasOddNumberOfLetters == true) {
+            } else if(!isEven(letters[i]) && hasOddNumberOfLetters) {
                 return false;
             }
         }
@@ -78,9 +78,9 @@ public class Main {
             int mask = 1 << i;
             if((checker & mask) != 0 && isEven(string.length())) {
                 return false;
-            } else if((checker & mask) != 0 && hasOddNumberOfLetters == false) {
+            } else if((checker & mask) != 0 && !hasOddNumberOfLetters) {
                 hasOddNumberOfLetters = true;
-            } else if((checker & mask) != 0 && hasOddNumberOfLetters == true) {
+            } else if((checker & mask) != 0 && hasOddNumberOfLetters) {
                 return false;
             }
         }
